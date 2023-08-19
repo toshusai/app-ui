@@ -85,6 +85,8 @@ body{
   line-height: 16px;
   font-size: 12px;
   overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif
 }
 #__next{
   height: 100%;
