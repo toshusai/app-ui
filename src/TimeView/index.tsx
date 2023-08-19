@@ -9,7 +9,9 @@ type TimeViewProps = {
   pxPerSec: number;
   fps: number;
   frameMode: boolean;
+  height?: number;
   onMouseDown?: (e: React.MouseEvent) => void;
+  onTouchStart?: (e: React.TouchEvent) => void;
 };
 const secStep = [0.01, 0.05, 0.1, 0.2, 0.5, 1, 5, 10, 30, 60];
 const frameStep = [1, 5, 10, 30, 60, 120, 300, 600, 1800, 3600];
@@ -51,7 +53,14 @@ export const TimeView: FC<TimeViewProps> = (props) => {
   );
 
   return (
-    <TimeViewRootDiv ref={ref} onMouseDown={props.onMouseDown}>
+    <TimeViewRootDiv
+      ref={ref}
+      onMouseDown={props.onMouseDown}
+      onTouchStart={props.onTouchStart}
+      style={{
+        height: props.height,
+      }}
+    >
       {pSteps.map((left) => {
         return <TimePointDiv $left={left} key={left} />;
       })}
@@ -64,6 +73,7 @@ export const TimeView: FC<TimeViewProps> = (props) => {
                   props.offsetSec * props.fps
                 : left / props.pxPerSec + props.offsetSec
             }
+            height={props.height ?? 20}
             key={left}
             left={left}
           />
@@ -82,6 +92,7 @@ const TimeViewRootDiv = styled.div`
   box-sizing: border-box;
   border: 1px solid white;
   user-select: none;
+  touch-action: none;
   color: white;
 `;
 
@@ -93,6 +104,8 @@ const TimePointDiv = styled.div.attrs<{
   },
 }))<{ $left: number }>`
   position: absolute;
+  touch-action: none;
+  pointer-events: none;
   border-left: 1px solid gray;
   height: 4px;
   bottom: 0px;
