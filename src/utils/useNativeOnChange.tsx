@@ -11,11 +11,7 @@ export function useNativeOnChange<
   useEffect(() => {
     const onChange = (e: Event) => {
       const target = e.target as T;
-      if (typeof propsValue === "string") {
-        propsOnChange?.(target.value);
-      } else if (target instanceof HTMLInputElement) {
-        propsOnChange?.(target.valueAsNumber);
-      }
+      propsOnChange?.(target.value);
     };
 
     if (inputRef.current) {
@@ -27,10 +23,5 @@ export function useNativeOnChange<
     };
   }, [propsOnChange, propsValue]);
 
-  useEffect(() => {
-    if (propsValue !== value) {
-      setValue(propsValue);
-    }
-  }, [propsValue, value]);
   return { inputRef, value, setValue };
 }
