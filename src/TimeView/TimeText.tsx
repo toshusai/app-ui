@@ -1,23 +1,13 @@
 import styled from "styled-components";
 
 export function TimeText(props: {
-  time: number;
+  time: string;
   left: number;
   height: number;
 }) {
-  let viewTime = props.time.toFixed(2);
-  if (viewTime.endsWith(".00")) {
-    viewTime = viewTime.slice(0, -3);
-  } else if (viewTime.endsWith("0")) {
-    viewTime = viewTime.slice(0, -1);
-  }
-  if (viewTime === "-0") {
-    viewTime = "0";
-  }
-
   return (
     <TimeTextDiv $left={props.left} $height={props.height}>
-      <div style={{ marginLeft: "2px" }}>{viewTime}</div>
+      <div style={{ marginLeft: "2px" }}>{props.time}</div>
     </TimeTextDiv>
   );
 }
