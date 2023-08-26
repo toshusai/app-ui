@@ -1,7 +1,7 @@
 import { type IconProps } from "tabler-icons-react";
 
-import { Flex, MenuItemWrapper, Root } from "./MenuItem";
 import { iconProps } from "../iconProps";
+import styled from "styled-components";
 
 export function MenuItemBase(props: {
   leftIcon?: React.FC<IconProps>;
@@ -27,3 +27,19 @@ export function MenuItemBase(props: {
     </Root>
   );
 }
+const Root = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  gap: 2px;
+`;
+const MenuItemWrapper = styled.div<{
+  $hasLeftIcon: boolean;
+}>`
+  padding-left: ${(props) => (props.$hasLeftIcon ? 0 : 12)}px;
+  padding-right: 8px;
+`;

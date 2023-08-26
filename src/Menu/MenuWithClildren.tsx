@@ -5,6 +5,8 @@ import { StyledContextMenuButton } from "../context_menu";
 import { DropdownMenu } from "../DropdownMenu";
 import { iconProps } from "../iconProps";
 import { MenuItemBase } from "./MenuItemBase";
+import { usePopover } from "../ToolBarMenu";
+import { createPortal } from "react-dom";
 
 function tryRepeatUntilSuccess(
   func: () => void,
@@ -53,6 +55,8 @@ export function MenuWithClildren(props: {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useKeyboardMenuHandler(ref, showMenu, setShowMenu, buttonRef);
+
+  usePopover(ref, buttonRef, showMenu, "right", "top");
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLButtonElement>) => {
@@ -110,20 +114,20 @@ export function MenuWithClildren(props: {
           }}
         ></div>
       </StyledContextMenuButton>
-      {showMenu && (
-        <DropdownMenu
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          ref={ref}
-          style={{
-            position: "absolute",
-            left: "calc(100%)",
-            top: "-2px",
-          }}
-        >
-          {props.children}
-        </DropdownMenu>
-      )}
+      {showMenu &&
+        createPortal(
+          <DropdownMenu
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            ref={ref}
+            style={{
+              position: "absolute",
+            }}
+          >
+            {props.children}
+          </DropdownMenu>,
+          document.body
+        )}
     </>
   );
 }
