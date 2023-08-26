@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-type DragHanderContext<T, U> = {
+export type DragHanderContext<T, U> = {
   startX: number;
   startY: number;
   diffX: number;

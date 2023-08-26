@@ -10,9 +10,8 @@ type TimeViewProps = {
   fps: number;
   frameMode: boolean;
   height?: number;
-  onMouseDown?: (e: React.MouseEvent) => void;
-  onTouchStart?: (e: React.TouchEvent) => void;
-};
+} & Omit<JSX.IntrinsicElements["div"], "ref">;
+
 const secStep = [0.01, 0.05, 0.1, 0.2, 0.5, 1, 5, 10, 30, 60];
 const frameStep = [1, 5, 10, 30, 60, 120, 300, 600, 1800, 3600];
 const minInterval = 32;
@@ -52,6 +51,8 @@ export const TimeView: FC<TimeViewProps> = (props) => {
     props.offsetSec
   );
 
+  const { fps, frameMode, offsetSec, pxPerSec, ...rest } = props;
+
   return (
     <TimeViewRootDiv
       ref={ref}
@@ -60,6 +61,7 @@ export const TimeView: FC<TimeViewProps> = (props) => {
       style={{
         height: props.height,
       }}
+      {...rest}
     >
       {pSteps.map((left) => {
         return <TimePointDiv $left={left} key={left} />;
