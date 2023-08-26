@@ -9,8 +9,6 @@ export default meta;
 export const Basic: StoryObj<typeof meta> = {
   args: {
     pxPerSec: 100,
-    fps: 60,
-    frameMode: false,
     offsetSec: 0,
   },
 };
