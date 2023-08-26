@@ -19,4 +19,5 @@ export const ListItem = styled.div`
     background-color: var(${COLOR_HOVER_NAME});
     outline: 1px solid var(${COLOR_HOVER_NAME});
   }
+  white-space: nowrap;
 `;
