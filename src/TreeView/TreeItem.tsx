@@ -46,11 +46,10 @@ const TreeItemRoot = styled.li<{
   line-height: 12px;
   background-color: ${(props) =>
     props.selected ? `var(${COLOR_FOCUS_NAME})` : "transparent"};
+  font-family: "Roboto Mono", monospace;
 
   :hover {
     background-color: ${(props) =>
-      props.selected
-        ? `var(${COLOR_FOCUS_NAME})`
-        : `var(${COLOR_HOVER_NAME})`};
+      props.selected ? `var(${COLOR_FOCUS_NAME})` : `var(${COLOR_HOVER_NAME})`};
   }
 `;
