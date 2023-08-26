@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { tailwindLike } from "./tailwindLike";
 
 export const COLOR_BACKGROUND_NAME = "--color-background";
 export const COLOR_BACKGROUND_2_NAME = "--color-background-2";
@@ -91,4 +92,6 @@ body{
 #__next{
   height: 100%;
 }
+
+${tailwindLike}
 `;
