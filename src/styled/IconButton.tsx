@@ -24,3 +24,15 @@ export const IconButton = styled.button`
     opacity: 1;
   }
 `;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  ${IconButton}:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  ${IconButton}:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+`;

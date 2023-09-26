@@ -24,4 +24,12 @@ export const tailwindLike = css`
   .justify-center {
     justify-content: center;
   }
+
+  .gap-4 {
+    gap: 4px;
+  }
+
+  .gap-8 {
+    gap: 8px;
+  }
 `;
