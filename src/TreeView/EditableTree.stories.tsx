@@ -10,6 +10,12 @@ import { wait } from "../utils/wait";
 
 const meta = {
   component: EditableTree,
+  args: {
+    items: [],
+    renderItem: (item: any) => {
+      return <div style={{}}>{item.data.name}</div>;
+    },
+  },
 } satisfies Meta<typeof EditableTree>;
 
 export default meta;

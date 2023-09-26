@@ -7,6 +7,7 @@ export const Card: FC<{
   height?: number | string;
   box?: boolean;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
 }> = (props) => {
   return (
     <CardRoot

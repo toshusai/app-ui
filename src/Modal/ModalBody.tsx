@@ -3,11 +3,12 @@ import { X } from "tabler-icons-react";
 import { TransparentIconButton } from "../TransparentIconButton";
 import { iconProps } from "../iconProps";
 import styled from "styled-components";
-import { COLOR_BACKGROUND_2_NAME, COLOR_BACKGROUND_NAME } from "../styled";
+import { COLOR_BACKGROUND_NAME } from "../styled";
 
 export const ModalBody: FC<{
   title?: string;
   onClose?: () => void;
+  children?: React.ReactNode;
 }> = (props) => {
   return (
     <Root>
