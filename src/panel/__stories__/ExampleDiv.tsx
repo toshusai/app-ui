@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLOR_BACKGROUND_2_NAME, COLOR_BACKGROUND_NAME } from "../../styled";
 
 export const Root = styled.div`
   width: 100%;
@@ -8,17 +9,8 @@ export const Root = styled.div`
 export const ExampleDiv = styled.div`
   width: 100%;
   height: 100%;
-  background-color: red;
-`;
-
-export const ExampleDiv2 = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-`;
-
-export const ExampleDiv3 = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(${COLOR_BACKGROUND_NAME});
 `;

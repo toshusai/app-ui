@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { ScaleScrollBar } from ".";
+import { Canvas } from "@storybook/blocks";
 
 const meta = {
   component: ScaleScrollBar,
@@ -18,7 +19,10 @@ export const Primary: StoryObj<typeof meta> = {
     const [start, setStart] = useState(args.start);
     const [end, setEnd] = useState(args.end);
     return (
-      <div>
+      <div style={{ width: "256px" }}>
+        <div>start: {start}</div>
+        <div>end: {end}</div>
+        <div>length: {end - start}</div>
         <ScaleScrollBar
           start={start}
           end={end}
@@ -27,9 +31,6 @@ export const Primary: StoryObj<typeof meta> = {
             setEnd(end);
           }}
         />
-        <div>start: {start}</div>
-        <div>end: {end}</div>
-        <div>length: {end - start}</div>
       </div>
     );
   },

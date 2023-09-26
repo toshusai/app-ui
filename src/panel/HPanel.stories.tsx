@@ -1,11 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { HPanel, VPanel } from ".";
-import {
-  ExampleDiv,
-  ExampleDiv2,
-  ExampleDiv3,
-  Root,
-} from "./__stories__/ExampleDiv";
+import { ExampleDiv, Root } from "./__stories__/ExampleDiv";
 
 const meta = {
   component: HPanel,
@@ -16,7 +11,7 @@ export default meta;
 export const Basic: StoryObj<typeof meta> = {
   args: {
     left: <ExampleDiv>left</ExampleDiv>,
-    right: <ExampleDiv2>right</ExampleDiv2>,
+    right: <ExampleDiv>right</ExampleDiv>,
   },
   render: (args) => (
     <Root>
@@ -35,11 +30,11 @@ export const WithVPanel: StoryObj<typeof meta> = {
       >
         <VPanel
           top={<ExampleDiv>top</ExampleDiv>}
-          bottom={<ExampleDiv2>bottom</ExampleDiv2>}
+          bottom={<ExampleDiv>bottom</ExampleDiv>}
         />
       </div>
     ),
-    right: <ExampleDiv3>right</ExampleDiv3>,
+    right: <ExampleDiv>right</ExampleDiv>,
   },
   render: (args) => {
     return (

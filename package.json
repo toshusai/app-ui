@@ -23,7 +23,8 @@
     "@storybook/react": "^7.1.1",
     "@storybook/react-webpack5": "^7.1.1",
     "@storybook/testing-library": "^0.2.0",
-    "@types/react": "^16.9.9",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
     "@types/styled-components": "^5.1.26",
     "esbuild": "^0.16.9",
     "react": "^18.2.0",
@@ -34,8 +35,8 @@
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.2.2",
+    "react-dom": "18.2.2",
     "styled-components": "^5.3.6",
     "tabler-icons-react": "^1.56.0"
   }

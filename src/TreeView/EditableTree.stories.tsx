@@ -96,6 +96,33 @@ export const Basic: StoryObj<typeof meta> = {
   },
 };
 
+export const Sortable: StoryObj<typeof meta> = {
+  args: {
+    items,
+  },
+  render: (props) => {
+    useEffect(() => {
+      KeyboardInput.init(() => {});
+    }, []);
+    const [items, handleOrderChange] = useTreeItems<Data>(
+      props.items as TreeViewItem<Data>[]
+    );
+    return (
+      <>
+        <EditableTree<Data, Item>
+          sortable
+          onOrderChange={handleOrderChange}
+          items={items as Item[]}
+          renderItem={(item) => {
+            return <div style={{}}>{item.data.name}</div>;
+          }}
+          onClick={(item) => {}}
+        />
+      </>
+    );
+  },
+};
+
 export const $Select2ItemsAndDaDToDir: StoryObj<typeof meta> = {
   args: {
     items,
