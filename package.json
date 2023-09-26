@@ -1,6 +1,6 @@
 {
   "name": "@toshusai/app-ui",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "dist/cjs/index.js",
   "types": "dist/src/index.d.ts",
