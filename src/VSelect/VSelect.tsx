@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Select } from "./Select/Select";
+import { Select } from "../Select/Select";
 
 export type Item = {
   label: string;

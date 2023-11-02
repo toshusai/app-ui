@@ -6,7 +6,7 @@ export * from "./TimeCursor";
 export * from "./ToolbarButton";
 export * from "./TransparentIconButton";
 export * from "./VInput/VInput";
-export * from "./VSelect";
+export * from "./VSelect/VSelect";
 export * from "./VTextarea";
 export * from "./iconProps";
 export * from "./mergeRefs";
