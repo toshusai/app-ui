@@ -1,24 +1,28 @@
-import { FC } from "react";
 import { X } from "tabler-icons-react";
 import { TransparentIconButton } from "../TransparentIconButton";
 import { iconProps } from "../iconProps";
 import styled from "styled-components";
 import { COLOR_BACKGROUND_NAME } from "../GlobalStyle";
 
-export const ModalBody: FC<{
+export function ModalBody({
+  title,
+  onClose,
+  children,
+}: {
   title?: string;
   onClose?: () => void;
-}> = (props) => {
+  children?: React.ReactNode;
+}) {
   return (
     <Root>
       <CloseButton>
-        <TransparentIconButton onClick={props.onClose}>
+        <TransparentIconButton onClick={onClose}>
           <X {...iconProps} />
         </TransparentIconButton>
       </CloseButton>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div>{props.title}</div>
+        <div>{title}</div>
       </div>
       <div
         style={{
@@ -26,11 +30,12 @@ export const ModalBody: FC<{
           paddingTop: "4px",
         }}
       >
-        {props.children}
+        {children}
       </div>
     </Root>
   );
-};
+}
+
 const CloseButton = styled.div`
   position: absolute;
   right: 0;
