@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { ToolbarButton } from "./ToolbarButton";
+import { ToolBarButton } from "./ToolBarButton";
 import { DropdownMenu } from "../DropdownMenu";
 import { createPortal } from "react-dom";
 import { usePopover } from "./usePopover";
@@ -25,9 +25,9 @@ export function ToolBarMenu(props: {
 
   return (
     <>
-      <ToolbarButton ref={buttonRef} onClick={handleClick}>
+      <ToolBarButton ref={buttonRef} onClick={handleClick}>
         {props.title}
-      </ToolbarButton>
+      </ToolBarButton>
       {showMenu &&
         createPortal(
           <DropdownMenu ref={ref}>{props.children}</DropdownMenu>,
