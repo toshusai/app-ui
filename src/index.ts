@@ -3,7 +3,6 @@ export * from "./KeyboardInput";
 export * from "./ListItem";
 export * from "./TimeCursor";
 export * from "./ToolBarMenu";
-export * from "./TransparentIconButton";
 export * from "./VInput/VInput";
 export * from "./VSelect/VSelect";
 export * from "./VTextarea/VTextarea";
