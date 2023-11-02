@@ -1,6 +1,6 @@
 import { FC, forwardRef, memo } from "react";
 
-import { StyledInput } from "./styled/StyledInput";
+import { StyledInput } from "./styled/StyledInput.1";
 import { useNativeOnChange } from "./utils/useNativeOnChange";
 import { mergeRefs } from "./mergeRefs";
 

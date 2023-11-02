@@ -3,8 +3,8 @@ import { FC, useCallback, useState } from "react";
 import { useNativeOnChange } from "../utils/useNativeOnChange";
 import { getDragHander } from "../utils/getDragHander";
 
-import { StyledInput } from "../styled/StyledInput";
 import { minMax } from "../utils/minMax";
+import { Input } from "../Input";
 
 type VNumberInputProps = {
   value?: number;
@@ -74,7 +74,7 @@ export const VNumberInput: FC<VNumberInputProps> = (props) => {
   );
 
   return (
-    <StyledInput
+    <Input
       ref={inputRef}
       readOnly={!isFocused}
       value={props.view ? props.view(value as number) : value}

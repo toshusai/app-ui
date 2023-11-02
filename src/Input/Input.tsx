@@ -3,9 +3,9 @@ import {
   COLOR_BORDER_NAME,
   COLOR_INPUT_BACKGROUND_FOCUS_NAME,
   COLOR_INPUT_BACKGROUND_NAME,
-} from "./GlobalStyle";
+} from "../styled/GlobalStyle";
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
   display: block;
   color: var(--color-text);
   box-sizing: border-box;
