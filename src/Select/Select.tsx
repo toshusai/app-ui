@@ -1,7 +1,13 @@
 import styled from "styled-components";
-import { COLOR_BORDER_NAME, COLOR_INPUT_BACKGROUND_DISABLED_NAME, COLOR_INPUT_BACKGROUND_FOCUS_NAME, COLOR_INPUT_BACKGROUND_NAME, COLOR_TEXT_DISABLED_NAME } from "./GlobalStyle";
+import {
+  COLOR_BORDER_NAME,
+  COLOR_INPUT_BACKGROUND_DISABLED_NAME,
+  COLOR_INPUT_BACKGROUND_FOCUS_NAME,
+  COLOR_INPUT_BACKGROUND_NAME,
+  COLOR_TEXT_DISABLED_NAME,
+} from "../styled/GlobalStyle";
 
-export const StyledSelect = styled.select`
+export const Select = styled.select`
   display: block;
   color: var(--color-text);
   box-sizing: border-box;

@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { StyledSelect } from "./styled/StyledSelect";
+import { Select } from "./Select/Select";
 
 export type Item = {
   label: string;
@@ -17,7 +17,7 @@ type Props = {
 
 export const VSelect: FC<Props> = (props) => {
   return (
-    <StyledSelect
+    <Select
       value={props.value}
       onChange={(e) => {
         props.onChange(e.target.value);
@@ -31,6 +31,6 @@ export const VSelect: FC<Props> = (props) => {
           </option>
         );
       })}
-    </StyledSelect>
+    </Select>
   );
 };
