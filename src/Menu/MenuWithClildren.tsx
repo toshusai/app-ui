@@ -2,7 +2,7 @@ import { FC, useCallback, useEffect, useRef } from "react";
 import { ArrowRight, type IconProps } from "tabler-icons-react";
 
 import { StyledContextMenuButton } from "../context_menu";
-import { DropdownMenu } from "../DropdownMenu";
+import { Popover } from "../Popover/Popover";
 import { iconProps } from "../iconProps";
 import { MenuItemBase } from "./MenuItemBase";
 import { createPortal } from "react-dom";
@@ -116,7 +116,7 @@ export function MenuWithClildren(props: {
       </StyledContextMenuButton>
       {showMenu &&
         createPortal(
-          <DropdownMenu
+          <Popover
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             ref={ref}
@@ -125,7 +125,7 @@ export function MenuWithClildren(props: {
             }}
           >
             {props.children}
-          </DropdownMenu>,
+          </Popover>,
           document.body
         )}
     </>

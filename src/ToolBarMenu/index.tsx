@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { ToolBarButton } from "./ToolBarButton";
-import { DropdownMenu } from "../DropdownMenu";
+import { Popover } from "../Popover/Popover";
 import { createPortal } from "react-dom";
 import { usePopover } from "./usePopover";
 import { useKeyboardMenuHandler } from "./useKeyboardMenuHandler";
@@ -30,7 +30,7 @@ export function ToolBarMenu(props: {
       </ToolBarButton>
       {showMenu &&
         createPortal(
-          <DropdownMenu ref={ref}>{props.children}</DropdownMenu>,
+          <Popover ref={ref}>{props.children}</Popover>,
           document.body
         )}
     </>

@@ -1,4 +1,4 @@
-export * from "./DropdownMenu";
+export * from "./Popover";
 export * from "./KeyboardInput";
 export * from "./ListItem";
 export * from "./TimeCursor";

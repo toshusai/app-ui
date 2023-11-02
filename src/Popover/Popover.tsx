@@ -3,9 +3,9 @@ import {
   COLOR_BACKGROUND_2_NAME,
   COLOR_BACKGROUND_NAME,
   COLOR_BORDER_NAME,
-} from "./GlobalStyle";
+} from "../GlobalStyle";
 
-export const DropdownMenu = styled.div`
+export const Popover = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
