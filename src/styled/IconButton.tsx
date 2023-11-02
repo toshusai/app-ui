@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import { BottomToolTip, ToolTip } from "./ToolTip";
 import { COLOR_BORDER_NAME, COLOR_BUTTON_BACKGROUND_NAME } from "./GlobalStyle";
 
 export const IconButton = styled.button`
@@ -16,11 +15,4 @@ export const IconButton = styled.button`
   border-radius: 4px;
   background-color: var(${COLOR_BUTTON_BACKGROUND_NAME});
   user-select: none;
-
-  :hover > ${ToolTip} {
-    opacity: 1;
-  }
-  :hover > ${BottomToolTip} {
-    opacity: 1;
-  }
 `;
