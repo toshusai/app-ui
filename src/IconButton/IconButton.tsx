@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import { COLOR_BORDER_NAME, COLOR_BUTTON_BACKGROUND_NAME } from "../GlobalStyle/GlobalStyle";
 
-import { COLOR_BORDER_NAME, COLOR_BUTTON_BACKGROUND_NAME } from "./GlobalStyle";
 
 export const IconButton = styled.button`
   position: relative;
