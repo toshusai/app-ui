@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLOR_HOVER_NAME, COLOR_TEXT_NAME, MONO_FONT_NAME } from "./styled";
+import { COLOR_HOVER_NAME, COLOR_TEXT_NAME, MONO_FONT_NAME } from "../GlobalStyle";
 
 export const ListItem = styled.div`
   display: flex;
