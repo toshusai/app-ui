@@ -1,4 +1,3 @@
-export * from "./DropdownLike";
 export * from "./DropdownMenu";
 export * from "./KeyboardInput";
 export * from "./ListItem";
