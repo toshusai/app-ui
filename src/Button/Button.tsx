@@ -5,7 +5,7 @@ import {
   COLOR_INPUT_BACKGROUND_DISABLED_NAME,
   COLOR_INPUT_BACKGROUND_FOCUS_NAME,
   COLOR_TEXT_DISABLED_NAME,
-} from "./GlobalStyle";
+} from "../styled/GlobalStyle";
 
 export const buttonCss = css`
   cursor: pointer;
