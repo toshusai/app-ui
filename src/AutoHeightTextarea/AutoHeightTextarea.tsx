@@ -1,5 +1,5 @@
 import { forwardRef, useEffect, useRef } from "react";
-import { mergeRefs } from "../mergeRefs";
+import { mergeRefs } from "../utils/mergeRefs";
 import { VTextareaProps, VTextarea } from "../VTextarea/VTextarea";
 
 export const AutoHeightTextarea = forwardRef(function AutoHeightTextarea(

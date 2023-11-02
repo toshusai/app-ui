@@ -3,7 +3,7 @@ import { FC, forwardRef } from "react";
 import { useNativeOnChange } from "../utils/useNativeOnChange";
 
 import { Textarea } from "../Textarea/Textarea";
-import { mergeRefs } from "../mergeRefs";
+import { mergeRefs } from "../utils/mergeRefs";
 
 export type VTextareaProps = {
   value?: string;

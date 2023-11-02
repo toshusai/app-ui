@@ -8,7 +8,6 @@ export * from "./VInput/VInput";
 export * from "./VSelect/VSelect";
 export * from "./VTextarea/VTextarea";
 export * from "./iconProps";
-export * from "./mergeRefs";
 export * from "./Button";
 export * from "./GlobalStyle";
 export * from "./IconButton";
