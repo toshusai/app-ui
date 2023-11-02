@@ -2,7 +2,7 @@ import { FC, forwardRef } from "react";
 
 import { useNativeOnChange } from "./utils/useNativeOnChange";
 
-import { StyledTextarea } from "./styled/StyledTextarea";
+import { Textarea } from "./Textarea/Textarea";
 import { mergeRefs } from "./mergeRefs";
 
 export type VTextareaProps = {
@@ -28,7 +28,7 @@ export const VTextarea = forwardRef<HTMLTextAreaElement, VTextareaProps>(
       );
     return (
       <>
-        <StyledTextarea
+        <Textarea
           {...rest}
           onChange={(e) => {
             props.onInput?.(e.target.value);
