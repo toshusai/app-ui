@@ -1,7 +1,12 @@
 import styled from "styled-components";
-import { COLOR_BORDER_NAME, COLOR_BUTTON_BACKGROUND_NAME } from "./GlobalStyle";
+import {
+  COLOR_BORDER_NAME,
+  COLOR_BUTTON_BACKGROUND_NAME,
+} from "../styled/GlobalStyle";
 
-export const StyledCheckbox = styled.input`
+export const Checkbox = styled.input.attrs({
+  type: "checkbox",
+})`
   margin: 0;
   display: block;
   color: var(--color-text);
@@ -24,7 +29,6 @@ export const StyledCheckbox = styled.input`
       top: 1px;
       font-size: 12px;
       color: white;
-      transition: all 0.2s; /* on prévoit une animation */
     }
     accent-color: red;
     background: red;
