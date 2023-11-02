@@ -14,7 +14,7 @@ export class KeyboardInput {
     cb();
   }
 
-  static listners = new Map<string, ((e: KeyboardEvent) => void)[]>();
+  static listeners = new Map<string, ((e: KeyboardEvent) => void)[]>();
   static id = 0;
 
   static addKeyDownListener(key: Key, listener: (e: KeyboardEvent) => void) {
@@ -33,10 +33,10 @@ export class KeyboardInput {
       (e: KeyboardEvent) => {
         if (e.key.toLowerCase() === key.toLowerCase()) {
           listener(e);
-          if (!KeyboardInput.listners.has(id)) {
-            KeyboardInput.listners.set(id, []);
+          if (!KeyboardInput.listeners.has(id)) {
+            KeyboardInput.listeners.set(id, []);
           }
-          KeyboardInput.listners.get(id)?.push(listener);
+          KeyboardInput.listeners.get(id)?.push(listener);
         }
       },
     ];
@@ -49,7 +49,7 @@ export class KeyboardInput {
   }
 
   static removeKeyDownListener(id: string) {
-    const listeners = KeyboardInput.listners.get(id);
+    const listeners = KeyboardInput.listeners.get(id);
     if (listeners) {
       listeners.forEach((listener) => {
         document.removeEventListener("keydown", listener);
