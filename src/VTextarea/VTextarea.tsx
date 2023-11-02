@@ -1,9 +1,9 @@
 import { FC, forwardRef } from "react";
 
-import { useNativeOnChange } from "./utils/useNativeOnChange";
+import { useNativeOnChange } from "../utils/useNativeOnChange";
 
-import { Textarea } from "./Textarea/Textarea";
-import { mergeRefs } from "./mergeRefs";
+import { Textarea } from "../Textarea/Textarea";
+import { mergeRefs } from "../mergeRefs";
 
 export type VTextareaProps = {
   value?: string;
