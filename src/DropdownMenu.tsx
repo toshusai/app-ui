@@ -3,7 +3,7 @@ import {
   COLOR_BACKGROUND_2_NAME,
   COLOR_BACKGROUND_NAME,
   COLOR_BORDER_NAME,
-} from "./styled";
+} from "./GlobalStyle";
 
 export const DropdownMenu = styled.div`
   display: flex;

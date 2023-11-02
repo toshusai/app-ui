@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
   COLOR_BORDER_NAME,
   COLOR_BUTTON_BACKGROUND_NAME,
-} from "../styled/GlobalStyle";
+} from "../GlobalStyle/GlobalStyle";
 
 export const Checkbox = styled.input.attrs({
   type: "checkbox",

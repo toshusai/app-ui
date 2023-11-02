@@ -3,7 +3,7 @@ import {
   COLOR_BORDER_NAME,
   COLOR_INPUT_BACKGROUND_FOCUS_NAME,
   COLOR_INPUT_BACKGROUND_NAME,
-} from "../styled/GlobalStyle";
+} from "../GlobalStyle/GlobalStyle";
 
 export const Input = styled.input`
   display: block;

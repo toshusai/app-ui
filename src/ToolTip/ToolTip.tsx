@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { COLOR_BACKGROUND_2_NAME } from "../styled/GlobalStyle";
+import { COLOR_BACKGROUND_2_NAME } from "../GlobalStyle/GlobalStyle";
 
 const ToolTipDiv = styled.div`
   position: absolute;

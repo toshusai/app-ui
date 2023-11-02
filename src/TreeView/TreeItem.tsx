@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  COLOR_BUTTON_BACKGROUND_NAME,
-  COLOR_FOCUS_NAME,
-  COLOR_HOVER_NAME,
-  COLOR_INPUT_BACKGROUND_FOCUS_NAME,
-} from "../styled";
+import { COLOR_FOCUS_NAME, COLOR_HOVER_NAME } from "../GlobalStyle";
 
 export type TreeViewItem<T> = {
   id: string;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLOR_BACKGROUND_2_NAME, COLOR_BACKGROUND_NAME } from "./styled";
+import { COLOR_BACKGROUND_2_NAME, COLOR_BACKGROUND_NAME } from "./GlobalStyle";
 
 export const ToolbarButton = styled.button`
   background-color: var(${COLOR_BACKGROUND_2_NAME});

@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Plus } from "tabler-icons-react";
 
 import { iconProps } from "./iconProps";
-import { IconButton } from "./styled/IconButton";
+import { IconButton } from "./IconButton";
 
 type Item = {
   label: string;

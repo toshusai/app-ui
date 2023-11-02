@@ -5,7 +5,7 @@ import {
   COLOR_INPUT_BACKGROUND_FOCUS_NAME,
   COLOR_INPUT_BACKGROUND_NAME,
   COLOR_TEXT_DISABLED_NAME,
-} from "../styled/GlobalStyle";
+} from "../GlobalStyle/GlobalStyle";
 
 export const Select = styled.select`
   display: block;
