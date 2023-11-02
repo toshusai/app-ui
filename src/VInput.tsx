@@ -1,8 +1,8 @@
-import { FC, forwardRef, memo } from "react";
+import { forwardRef, memo } from "react";
 
-import { StyledInput } from "./styled/StyledInput.1";
 import { useNativeOnChange } from "./utils/useNativeOnChange";
 import { mergeRefs } from "./mergeRefs";
+import { Input } from "./Input";
 
 export type ClickEditInputProps = {
   value?: string;
@@ -27,7 +27,7 @@ export const VInput = forwardRef<HTMLInputElement, ClickEditInputProps>(
 
     return (
       <>
-        <StyledInput
+        <Input
           onChange={(e) => {
             onInput?.(e.target.value);
             setValue(e.target.value);
