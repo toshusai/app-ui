@@ -1,8 +1,8 @@
 import { forwardRef, memo } from "react";
 
-import { useNativeOnChange } from "./utils/useNativeOnChange";
-import { mergeRefs } from "./mergeRefs";
-import { Input } from "./Input";
+import { useNativeOnChange } from "../utils/useNativeOnChange";
+import { mergeRefs } from "../mergeRefs";
+import { Input } from "../Input";
 
 export type ClickEditInputProps = {
   value?: string;
