@@ -1,12 +1,12 @@
-import { FC, useCallback, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef } from "react";
 import { ArrowRight, type IconProps } from "tabler-icons-react";
 
 import { StyledContextMenuButton } from "../context_menu";
 import { DropdownMenu } from "../DropdownMenu";
 import { iconProps } from "../iconProps";
 import { MenuItemBase } from "./MenuItemBase";
-import { usePopover } from "../ToolBarMenu";
 import { createPortal } from "react-dom";
+import { usePopover } from "../ToolBarMenu/usePopover";
 
 function tryRepeatUntilSuccess(
   func: () => void,
