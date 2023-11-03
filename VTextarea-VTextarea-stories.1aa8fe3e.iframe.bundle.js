@@ -1,0 +1,31 @@
+"use strict";(self.webpackChunk_toshusai_app_ui=self.webpackChunk_toshusai_app_ui||[]).push([[815],{"./src/VTextarea/VTextarea.stories.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{Basic:()=>Basic,__namedExportsOrder:()=>__namedExportsOrder,default:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__={component:__webpack_require__("./src/VTextarea/VTextarea.tsx").z},Basic={args:{}};Basic.parameters={...Basic.parameters,docs:{...Basic.parameters?.docs,source:{originalSource:"{\n  args: {}\n}",...Basic.parameters?.docs?.source}}};const __namedExportsOrder=["Basic"]},"./src/Textarea/Textarea.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{g:()=>Textarea});var styled_components__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js"),_GlobalStyle_GlobalStyle__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("./src/GlobalStyle/GlobalStyle.tsx");const Textarea=styled_components__WEBPACK_IMPORTED_MODULE_1__.ZP.textarea`
+  display: block;
+  color: var(--color-text);
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+  border: 1px solid var(${_GlobalStyle_GlobalStyle__WEBPACK_IMPORTED_MODULE_0__.Eu});
+  background-color: var(${_GlobalStyle_GlobalStyle__WEBPACK_IMPORTED_MODULE_0__.Il});
+  border-radius: 8px;
+  height: 16px;
+  padding-left: 8px;
+  caret-color: red;
+  max-width: 256px;
+
+  resize: none;
+  height: 42px;
+
+  :focus {
+    outline: none;
+    border-radius: 8px;
+    background-color: var(${_GlobalStyle_GlobalStyle__WEBPACK_IMPORTED_MODULE_0__.sO});
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  font-family: "Ricty Diminished";
+`;try{Textarea.displayName="Textarea",Textarea.__docgenInfo={description:"",displayName:"Textarea",props:{ref:{defaultValue:null,description:"",name:"ref",required:!1,type:{name:"((instance: HTMLTextAreaElement | null) => void) | RefObject<HTMLTextAreaElement> | null"}},theme:{defaultValue:null,description:"",name:"theme",required:!1,type:{name:"any"}},as:{defaultValue:null,description:"",name:"as",required:!1,type:{name:"undefined"}},forwardedAs:{defaultValue:null,description:"",name:"forwardedAs",required:!1,type:{name:"undefined"}}}},"undefined"!=typeof STORYBOOK_REACT_CLASSES&&(STORYBOOK_REACT_CLASSES["src/Textarea/Textarea.tsx#Textarea"]={docgenInfo:Textarea.__docgenInfo,name:"Textarea",path:"src/Textarea/Textarea.tsx#Textarea"})}catch(__react_docgen_typescript_loader_error){}},"./src/VTextarea/VTextarea.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{z:()=>VTextarea});var react__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("./node_modules/react/index.js"),_utils_useNativeOnChange__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("./src/utils/useNativeOnChange.tsx"),_Textarea_Textarea__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("./src/Textarea/Textarea.tsx"),_utils_mergeRefs__WEBPACK_IMPORTED_MODULE_4__=__webpack_require__("./src/utils/mergeRefs.ts"),react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__("./node_modules/react/jsx-runtime.js");const VTextarea=(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(((props,forwardRef)=>{const{value:propsValue,onChange:propsOnChange,onInput:propsOnInput,...rest}=props,{inputRef,value,setValue}=(0,_utils_useNativeOnChange__WEBPACK_IMPORTED_MODULE_1__.l)(propsValue??"",(value=>props.onChange?.(value)));return(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment,{children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Textarea_Textarea__WEBPACK_IMPORTED_MODULE_2__.g,{...rest,onChange:e=>{props.onInput?.(e.target.value),setValue(e.target.value)},ref:(0,_utils_mergeRefs__WEBPACK_IMPORTED_MODULE_4__.l)([inputRef,forwardRef]),style:props.style,value})})}));try{VTextarea.displayName="VTextarea",VTextarea.__docgenInfo={description:"",displayName:"VTextarea",props:{value:{defaultValue:null,description:"",name:"value",required:!1,type:{name:"string | (string & readonly string[])"}},onChange:{defaultValue:null,description:"",name:"onChange",required:!1,type:{name:"((value: string) => void)"}},onInput:{defaultValue:null,description:"",name:"onInput",required:!1,type:{name:"((value: string) => void)"}}}},"undefined"!=typeof STORYBOOK_REACT_CLASSES&&(STORYBOOK_REACT_CLASSES["src/VTextarea/VTextarea.tsx#VTextarea"]={docgenInfo:VTextarea.__docgenInfo,name:"VTextarea",path:"src/VTextarea/VTextarea.tsx#VTextarea"})}catch(__react_docgen_typescript_loader_error){}},"./src/utils/mergeRefs.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{function mergeRefs(refs){const filteredRefs=refs.filter(Boolean);return filteredRefs.length?0===filteredRefs.length?filteredRefs[0]:inst=>{for(const ref of filteredRefs)"function"==typeof ref?ref(inst):null!=ref&&(ref.current=inst)}:null}__webpack_require__.d(__webpack_exports__,{l:()=>mergeRefs})},"./src/utils/useNativeOnChange.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{l:()=>useNativeOnChange});var react__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("./node_modules/react/index.js");function useNativeOnChange(propsValue,propsOnChange){const inputRef=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null),[value,setValue]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(propsValue);return(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{const onChange=e=>{const target=e.target;propsOnChange?.(target.value)};inputRef.current&&inputRef.current.addEventListener("change",onChange);const el=inputRef.current;return()=>{el?.removeEventListener("change",onChange)}}),[propsOnChange,propsValue]),{inputRef,value,setValue}}}}]);
+//# sourceMappingURL=VTextarea-VTextarea-stories.1aa8fe3e.iframe.bundle.js.map
