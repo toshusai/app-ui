@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-import { getDragHander } from "../utils/getDragHander";
+import { getDragHandler } from "../utils/getDragHandler";
 
 import { DividerBox } from "./DividerBox";
 
@@ -32,7 +32,7 @@ export const VPanel = ({
   const [rate, setRate] = React.useState(defaultRate ?? 0.5);
   const topHeight = `calc(${rate * 100}% - 2px)`;
   const bottomHeight = `calc(${(1 - rate) * 100}% - 2px)`;
-  const handleMouseDown = getDragHander((ctx) => {
+  const handleMouseDown = getDragHandler((ctx) => {
     const { diffY } = ctx;
     const el = ctx.startEvent.target as HTMLElement;
     const ctxWidth = el.parentElement?.clientHeight ?? 0;

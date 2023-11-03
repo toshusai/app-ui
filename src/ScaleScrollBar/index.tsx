@@ -1,7 +1,7 @@
 import { FC, memo, useRef } from "react";
 import styled from "styled-components";
 
-import { getDragHander } from "../utils/getDragHander";
+import { getDragHandler } from "../utils/getDragHandler";
 
 export function ScaleScrollBar(props: {
   start: number;
@@ -10,7 +10,7 @@ export function ScaleScrollBar(props: {
   minimumRange?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const handleMouseDownLeftHandle = getDragHander(({ diffX }) => {
+  const handleMouseDownLeftHandle = getDragHandler(({ diffX }) => {
     let newStart = Math.max(props.start + diffX / ref.current!.clientWidth, 0);
     const mimumWidthRate = minimumWidthPx / (ref.current?.clientWidth ?? 0);
     if (props.end - newStart < mimumWidthRate) {
@@ -19,7 +19,7 @@ export function ScaleScrollBar(props: {
     props.onScaleChange?.(newStart, props.end);
   });
 
-  const handleMouseDownRightHandle = getDragHander(({ diffX }) => {
+  const handleMouseDownRightHandle = getDragHandler(({ diffX }) => {
     let newEnd = Math.min(props.end + diffX / ref.current!.clientWidth, 1);
     const mimumWidthRate = minimumWidthPx / (ref.current?.clientWidth ?? 0);
     if (newEnd - props.start < mimumWidthRate) {
@@ -28,7 +28,7 @@ export function ScaleScrollBar(props: {
     props.onScaleChange?.(props.start, newEnd);
   });
 
-  const handleMouseDownStrip = getDragHander(({ diffX }) => {
+  const handleMouseDownStrip = getDragHandler(({ diffX }) => {
     const newStart = props.start + diffX / ref.current!.clientWidth;
     const newEnd = props.end + diffX / ref.current!.clientWidth;
     if (newStart < 0) {

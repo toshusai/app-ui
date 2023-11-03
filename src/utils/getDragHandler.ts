@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-export type DragHanderContext<T, U> = {
+export type DragHandlerContext<T, U> = {
   startX: number;
   startY: number;
   diffX: number;
@@ -12,21 +12,21 @@ export type DragHanderContext<T, U> = {
 };
 
 export function useDragHandler<T, U>(
-  cb: (context: DragHanderContext<T, U>) => U,
-  onDown?: (context: DragHanderContext<T, U>) => T,
-  onUp?: (context: DragHanderContext<T, U>) => void
+  cb: (context: DragHandlerContext<T, U>) => U,
+  onDown?: (context: DragHandlerContext<T, U>) => T,
+  onUp?: (context: DragHandlerContext<T, U>) => void
 ) {
   const memoHandler = useMemo(
-    () => getDragHander(cb, onDown, onUp),
+    () => getDragHandler(cb, onDown, onUp),
     [cb, onDown, onUp]
   );
   return memoHandler;
 }
 
-export function getDragHander<T, U>(
-  cb: (context: DragHanderContext<T, U>) => U,
-  onDown?: (context: DragHanderContext<T, U>) => T,
-  onUp?: (context: DragHanderContext<T, U>) => void
+export function getDragHandler<T, U>(
+  cb: (context: DragHandlerContext<T, U>) => U,
+  onDown?: (context: DragHandlerContext<T, U>) => T,
+  onUp?: (context: DragHandlerContext<T, U>) => void
 ) {
   return (downEvent: React.MouseEvent) => {
     const pass = onDown?.({

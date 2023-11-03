@@ -1,7 +1,7 @@
 import { FC, useCallback, useState } from "react";
 
 import { useNativeOnChange } from "../utils/useNativeOnChange";
-import { getDragHander } from "../utils/getDragHander";
+import { getDragHandler } from "../utils/getDragHandler";
 
 import { minMax } from "../utils/minMax";
 import { Input } from "../Input";
@@ -49,7 +49,7 @@ export function VNumberInput(props: VNumberInputProps) {
     );
   }, [props.min, props.max]);
 
-  const handleMouseDown = getDragHander(
+  const handleMouseDown = getDragHandler(
     (ctx) => {
       ctx.startEvent.preventDefault();
       let value = (props.value ?? 0) + ctx.diffX * (props.scale ?? 1);

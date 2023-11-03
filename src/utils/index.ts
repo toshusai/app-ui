@@ -1,4 +1,4 @@
-export * from "./getDragHander";
+export * from "./getDragHandler";
 export * from "./minMax";
 export * from "./createDragPointerHandler";
 export * from "./useNativeOnChange";

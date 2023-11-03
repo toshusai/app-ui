@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getDragHander } from "../utils";
+import { getDragHandler } from "../utils";
 
 export function useSelectRect(onUnselect?: () => void) {
   const [rect, setRect] = useState<{
@@ -8,7 +8,7 @@ export function useSelectRect(onUnselect?: () => void) {
     width: number;
     height: number;
   } | null>(null);
-  const handleMouseDownForSelect = getDragHander<
+  const handleMouseDownForSelect = getDragHandler<
     {
       scrollLeft: number;
       scrollTop: number;

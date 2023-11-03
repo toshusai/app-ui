@@ -1,9 +1,9 @@
-import { DragHanderContext } from "./getDragHander";
+import { DragHandlerContext } from "./getDragHandler";
 
 export function createDragPointerHandler<T, U>(functions: {
-  onDown?: (context: DragHanderContext<T, U>) => T;
-  onUp?: (context: DragHanderContext<T, U>) => void;
-  onMove?: (context: DragHanderContext<T, U>) => U;
+  onDown?: (context: DragHandlerContext<T, U>) => T;
+  onUp?: (context: DragHandlerContext<T, U>) => void;
+  onMove?: (context: DragHandlerContext<T, U>) => U;
 }) {
   return (downEvent: React.PointerEvent) => {
     const el = downEvent.currentTarget;
