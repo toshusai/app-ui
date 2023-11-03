@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { ToolBarMenu } from ".";
+import { ToolBarMenu } from "./ToolBarMenu";
 import { MenuItem, MenuWithClildren } from "../Menu";
 import { StyledContextMenuButton } from "../context_menu";
 

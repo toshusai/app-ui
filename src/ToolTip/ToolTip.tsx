@@ -22,6 +22,8 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useTooltip } from "./useTooltip";
 
+const DELAY = 0
+
 export function ToolTip({
   children,
   content,
@@ -44,7 +46,7 @@ export function ToolTip({
     return () => {
       clearTimeout(cancel as NodeJS.Timeout);
     };
-  });
+  }, []);
 
   return (
     <>
@@ -57,7 +59,7 @@ export function ToolTip({
         onMouseLeave={(e) => {
           cancel = setTimeout(() => {
             setIsVisible(false);
-          }, 300);
+          }, DELAY);
         }}
       >
         {children}
@@ -77,7 +79,7 @@ export function ToolTip({
             onMouseLeave={(e) => {
               cancel = setTimeout(() => {
                 setIsVisible(false);
-              }, 300);
+              }, DELAY);
             }}
           >
             {content}

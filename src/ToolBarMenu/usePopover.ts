@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Position } from ".";
+import { Position } from "./ToolBarMenu";
 
 export function usePopover(
   ref: React.RefObject<HTMLElement>,

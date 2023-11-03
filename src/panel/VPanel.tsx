@@ -20,13 +20,17 @@ const VPanelBox = styled.div`
   width: 100%;
 `;
 
-export const VPanel: FC<{
+export const VPanel = ({
+  top,
+  bottom,
+  defaultRate = 0.5,
+}: {
   top: React.ReactNode;
   bottom: React.ReactNode;
   defaultRate?: number;
-}> = (props) => {
-  const [rate, setRate] = React.useState(props.defaultRate ?? 0.5);
-  const topHeight = `calc(${(rate * 100)}% - 2px)`;
+}) => {
+  const [rate, setRate] = React.useState(defaultRate ?? 0.5);
+  const topHeight = `calc(${rate * 100}% - 2px)`;
   const bottomHeight = `calc(${(1 - rate) * 100}% - 2px)`;
   const handleMouseDown = getDragHander((ctx) => {
     const { diffY } = ctx;
@@ -42,7 +46,7 @@ export const VPanel: FC<{
           height: topHeight,
         }}
       >
-        {props.top}
+        {top}
       </DividerBox>
       <VPanelDivider onMouseDown={handleMouseDown} />
       <DividerBox
@@ -50,7 +54,7 @@ export const VPanel: FC<{
           height: bottomHeight,
         }}
       >
-        {props.bottom}
+        {bottom}
       </DividerBox>
     </VPanelBox>
   );

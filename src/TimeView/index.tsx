@@ -46,7 +46,7 @@ export function getStepPixel(
   });
 }
 
-export const TimeView: FC<TimeViewProps> = (props) => {
+export function TimeView(props: TimeViewProps) {
   const [width, ref] = useWidth();
 
   const { offsetSec, pxPerSec, renderText, steps: propsSteps, ...rest } = props;

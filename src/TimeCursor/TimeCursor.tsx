@@ -1,10 +1,8 @@
-import { FC } from "react";
-
-export const TimeCursor: FC<{
+export function TimeCursor(props: {
   left: number;
   top: number;
   bottom?: number;
-}> = (props) => {
+}) {
   const bottom = props.bottom ?? 0;
   return (
     <div
@@ -28,7 +26,8 @@ export const TimeCursor: FC<{
           top: "0px",
           width: "8px",
           height: "8px",
-        }} />
+        }}
+      />
     </div>
   );
 };

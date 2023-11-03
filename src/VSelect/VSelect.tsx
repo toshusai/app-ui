@@ -15,7 +15,7 @@ type Props = {
   disabled?: boolean;
 };
 
-export const VSelect: FC<Props> = (props) => {
+export function VSelect(props: Props) {
   return (
     <Select
       value={props.value}
@@ -33,4 +33,4 @@ export const VSelect: FC<Props> = (props) => {
       })}
     </Select>
   );
-};
+}

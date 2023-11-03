@@ -17,7 +17,7 @@ type VNumberInputProps = {
   max?: number;
 };
 
-export const VNumberInput: FC<VNumberInputProps> = (props) => {
+export function VNumberInput(props: VNumberInputProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   const { inputRef, value, setValue } = useNativeOnChange(

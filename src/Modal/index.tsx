@@ -53,14 +53,20 @@ function useFocusTrap(
   }, [elementRef, isOpen, onClose]);
 }
 
-export const Modal: React.FC<{
+export const Modal = ({
+  isOpen,
+  onClose,
+  children,
+  title,
+  canOutsideClickClose,
+}: {
   isOpen: boolean;
   onClose: () => void;
   children?: React.ReactNode;
   canEscapeKeyClose?: boolean;
   title?: string;
   canOutsideClickClose?: boolean;
-}> = ({ isOpen, onClose, children, title, canOutsideClickClose }) => {
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   useFocusTrap(ref, isOpen, onClose);
 

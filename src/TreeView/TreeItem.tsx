@@ -16,7 +16,7 @@ export function TreeItem<T>(
     children: React.ReactNode;
     depth?: number;
     selected?: boolean;
-  } & React.HTMLAttributes<HTMLLIElement>
+  } & Omit<React.HTMLAttributes<HTMLLIElement>, "dangerouslySetInnerHTML">
 ) {
   const { children, depth, ...rest } = props;
   return (
