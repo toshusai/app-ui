@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 import { getDragHander } from "../utils/getDragHander";
 
-export const ScaleScrollBar: FC<{
+export function ScaleScrollBar(props: {
   start: number;
   end: number;
   onScaleChange?: (start: number, end: number) => void;
   minimumRange?: number;
-}> = (props) => {
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const handleMouseDownLeftHandle = getDragHander(({ diffX }) => {
     let newStart = Math.max(props.start + diffX / ref.current!.clientWidth, 0);
@@ -84,7 +84,7 @@ export const ScaleScrollBar: FC<{
       </div>
     </div>
   );
-};
+}
 
 const ScaleScrollBarHandle = styled.div`
   position: absolute;

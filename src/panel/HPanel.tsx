@@ -20,12 +20,16 @@ const HBoxRoot = styled.div`
   width: 100%;
 `;
 
-export const HPanel: FC<{
+export const HPanel = ({
+  left,
+  right,
+  defaultRate,
+}: {
   left: React.ReactNode;
   right: React.ReactNode;
   defaultRate?: number;
-}> = (props) => {
-  const [rate, setRate] = React.useState(props.defaultRate ?? 0.5);
+}) => {
+  const [rate, setRate] = React.useState(defaultRate ?? 0.5);
   const leftWidth = `calc(${rate * 100}% - 2px)`;
   const rightWidth = `calc(${(1 - rate) * 100}% - 2px)`;
   const handleMouseDown = getDragHander((ctx) => {
@@ -42,7 +46,7 @@ export const HPanel: FC<{
           width: leftWidth,
         }}
       >
-        {props.left}
+        {left}
       </DividerBox>
       <HPanelDivider onMouseDown={handleMouseDown} />
       <DividerBox
@@ -50,7 +54,7 @@ export const HPanel: FC<{
           width: rightWidth,
         }}
       >
-        {props.right}
+        {right}
       </DividerBox>
     </HBoxRoot>
   );

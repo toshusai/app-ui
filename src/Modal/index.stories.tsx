@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { Modal } from ".";
-import { Button } from "../styled";
+import { Button, Input } from "..";
 
 const meta = {
   component: Modal,
@@ -19,12 +19,12 @@ export const Primary: StoryObj<typeof meta> = {
   render: () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-      <div>
+      <>
         <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
         <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Title">
-          <input type="text" />
+          <Input type="text" />
         </Modal>
-      </div>
+      </>
     );
   },
 };

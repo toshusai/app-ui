@@ -1,24 +1,14 @@
-import { type IconProps } from "tabler-icons-react";
-
-import { iconProps } from "../iconProps";
 import styled from "styled-components";
 
 export function MenuItemBase(props: {
-  leftIcon?: React.FC<IconProps>;
+  leftIcon?: React.ReactNode;
   text: string;
   children?: React.ReactNode;
 }) {
   return (
     <Root>
       <Flex>
-        {props.leftIcon &&
-          props.leftIcon({
-            ...iconProps,
-            style: {
-              ...iconProps.style,
-              margin: "",
-            },
-          })}
+        {props.leftIcon}
         <MenuItemWrapper $hasLeftIcon={props.leftIcon !== undefined}>
           {props.text}
         </MenuItemWrapper>

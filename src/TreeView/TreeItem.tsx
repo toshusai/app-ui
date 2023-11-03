@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  COLOR_BUTTON_BACKGROUND_NAME,
-  COLOR_FOCUS_NAME,
-  COLOR_HOVER_NAME,
-  COLOR_INPUT_BACKGROUND_FOCUS_NAME,
-} from "../styled";
+import { COLOR_FOCUS_NAME, COLOR_HOVER_NAME } from "../GlobalStyle";
 
 export type TreeViewItem<T> = {
   id: string;
@@ -21,7 +16,7 @@ export function TreeItem<T>(
     children: React.ReactNode;
     depth?: number;
     selected?: boolean;
-  } & React.HTMLAttributes<HTMLLIElement>
+  } & Omit<React.HTMLAttributes<HTMLLIElement>, "dangerouslySetInnerHTML">
 ) {
   const { children, depth, ...rest } = props;
   return (

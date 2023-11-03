@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { type IconProps } from "tabler-icons-react";
 
 import { MenuItemBase } from "./MenuItemBase";
 
@@ -12,7 +11,7 @@ const MenuItemShortcut = styled.div`
 `;
 
 export function MenuItem(props: {
-  leftIcon?: React.FC<IconProps>;
+  leftIcon?: React.ReactNode;
   text: string;
   shortcut?: string;
 }) {

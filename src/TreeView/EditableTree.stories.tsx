@@ -79,6 +79,9 @@ const items: Item[] = [
 export const Basic: StoryObj<typeof meta> = {
   args: {
     items,
+    renderItem: (item) => {
+      return <div style={{}}>{item.id}</div>;
+    },
   },
   render: (props) => {
     useEffect(() => {
@@ -132,6 +135,9 @@ export const Sortable: StoryObj<typeof meta> = {
 export const $Select2ItemsAndDaDToDir: StoryObj<typeof meta> = {
   args: {
     items,
+    renderItem: (item) => {
+      return <div style={{}}>{item.id}</div>;
+    },
   },
   play: async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));

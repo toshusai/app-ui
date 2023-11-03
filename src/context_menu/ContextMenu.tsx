@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useRef } from "react";
 import styled from "styled-components";
-import { COLOR_BACKGROUND_2_NAME, COLOR_BORDER_NAME } from "../styled";
+import { COLOR_BACKGROUND_2_NAME, COLOR_BORDER_NAME } from "../GlobalStyle";
 
 interface ContextMenuProps {
   show: boolean;

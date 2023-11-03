@@ -1,12 +1,13 @@
-import { FC, useCallback, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef } from "react";
 import { ArrowRight, type IconProps } from "tabler-icons-react";
 
 import { StyledContextMenuButton } from "../context_menu";
-import { DropdownMenu } from "../DropdownMenu";
+import { Popover } from "../Popover/Popover";
 import { iconProps } from "../iconProps";
 import { MenuItemBase } from "./MenuItemBase";
-import { usePopover } from "../ToolBarMenu";
 import { createPortal } from "react-dom";
+import { usePopover } from "../ToolBarMenu/usePopover";
+import { IconArrowRight } from "@tabler/icons-react";
 
 function tryRepeatUntilSuccess(
   func: () => void,
@@ -30,7 +31,7 @@ function tryRepeatUntilSuccess(
 
 export function MenuWithClildren(props: {
   title: string;
-  leftIcon?: FC<IconProps>;
+  leftIcon?: React.ReactNode;
   children: React.ReactNode;
   showMenu: boolean;
   setShowMenu: (showMenu: boolean) => void;
@@ -95,7 +96,7 @@ export function MenuWithClildren(props: {
         onKeyDown={handleKeyDown}
       >
         <MenuItemBase text={props.title} leftIcon={props.leftIcon}>
-          <ArrowRight
+          <IconArrowRight
             {...iconProps}
             color={"rgba(255, 255, 255, 0.5)"}
             style={{
@@ -116,7 +117,7 @@ export function MenuWithClildren(props: {
       </StyledContextMenuButton>
       {showMenu &&
         createPortal(
-          <DropdownMenu
+          <Popover
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             ref={ref}
@@ -125,7 +126,7 @@ export function MenuWithClildren(props: {
             }}
           >
             {props.children}
-          </DropdownMenu>,
+          </Popover>,
           document.body
         )}
     </>
@@ -138,7 +139,7 @@ function getFocusableElements(element: HTMLElement) {
   );
 }
 
-export function useKeyboardMenuHandler(
+function useKeyboardMenuHandler(
   ref: React.RefObject<HTMLDivElement>,
   showMenu: boolean,
   setShowMenu: (showMenu: boolean) => void,

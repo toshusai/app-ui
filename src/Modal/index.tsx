@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-import { ModalBody } from "./ModalBody";
+import { COLOR_BACKGROUND_NAME, IconButton, iconProps } from "..";
+import { X } from "tabler-icons-react";
+import styled from "styled-components";
 
 function useFocusTrap(
   elementRef: React.RefObject<HTMLElement>,
@@ -51,14 +53,20 @@ function useFocusTrap(
   }, [elementRef, isOpen, onClose]);
 }
 
-export const Modal: React.FC<{
+export const Modal = ({
+  isOpen,
+  onClose,
+  children,
+  title,
+  canOutsideClickClose,
+}: {
   isOpen: boolean;
   onClose: () => void;
   children?: React.ReactNode;
   canEscapeKeyClose?: boolean;
   title?: string;
   canOutsideClickClose?: boolean;
-}> = ({ isOpen, onClose, children, title, canOutsideClickClose }) => {
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   useFocusTrap(ref, isOpen, onClose);
 
@@ -92,10 +100,41 @@ export const Modal: React.FC<{
       }}
       onClick={handleOutsideClick}
     >
-      <ModalBody onClose={onClose} title={title}>
-        {children}
-      </ModalBody>
+      <Root>
+        <CloseButton>
+          <IconButton onClick={onClose}>
+            <X {...iconProps} />
+          </IconButton>
+        </CloseButton>
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div>{title}</div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            paddingTop: "4px",
+          }}
+        >
+          {children}
+        </div>
+      </Root>
     </div>,
     document.body
   );
 };
+
+const CloseButton = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+`;
+
+const Root = styled.div`
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  background-color: var(${COLOR_BACKGROUND_NAME});
+  position: relative;
+  height: min-content;
+  width: min-content;
+  padding: 8px;
+`;

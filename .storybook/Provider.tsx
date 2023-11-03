@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  COLOR_BACKGROUND_2_NAME,
-  COLOR_BACKGROUND_NAME,
-  GlobalStyle,
-} from "../src/styled/GlobalStyle";
+import { COLOR_BACKGROUND_2_NAME, GlobalStyle } from "../src/GlobalStyle";
 import { createGlobalStyle } from "styled-components";
 export const Provider = (story: any) => {
   return (
